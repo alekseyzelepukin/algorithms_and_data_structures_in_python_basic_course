@@ -14,6 +14,7 @@ while i < 10:
     n = int(input('Попытка #{:2d}: '.format(i + 1)))
     if n == rn:
         print('Поздравляю! Вы отгадали число с {:2d} попытки.'.format(i + 1))
+        break
     elif n > rn:
         print('Число {:3d} больше загаданногою'.format(n))
     else:
