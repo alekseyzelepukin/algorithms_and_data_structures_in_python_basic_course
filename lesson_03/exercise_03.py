@@ -5,7 +5,6 @@ from random import randint
 SIZE = 10
 
 array = [randint(0, 99) for _ in range(SIZE)]
-# array = [8, 3, 15, 6, 4, 2]
 
 print(array)
 
