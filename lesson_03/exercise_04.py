@@ -8,14 +8,16 @@ array = [randint(0, 9) for _ in range(SIZE)]
 
 print(array)
 
-# n = array[0]
-# n_freq = 1
+mode = array[0]
+mode_freq = 1
 
-scores = [0 for _ in range(len(array))]
+for i in range(len(array) - 1):
+    freq = 1
+    for j in range(i + 1, len(array)):
+        if array[i] == array[j]:
+            freq += 1
+        if freq > mode_freq:
+            mode_freq = freq
+            mode = array[i]
 
-for index, i in enumerate(array):
-    for j in array:
-        if i == j:
-            scores[index] += 1
-
-print(scores)
+print(f'Число {mode} встречается в массиве {mode_freq} раз(а)')
