@@ -5,7 +5,7 @@ from random import randint
 
 SIZE = 10
 
-array = [randint(0, 99) for _ in range(SIZE)]
+array = [randint(0, 9) for _ in range(SIZE)]
 
 print(array)
 
@@ -19,7 +19,7 @@ for index, element in enumerate(array):
         max_index = index
 
 if min_index == max_index:
-    print('Все элементы массива одинаковы.')
+    print('Все элементы массива одинаковы')
 else:
     start, end = min_index, max_index
 
@@ -30,4 +30,4 @@ else:
     for value in array[start+1:end]:
         total += value
 
-    print(f'Сумма элементов: {total}.')
+    print(f'Сумма элементов: {total}')

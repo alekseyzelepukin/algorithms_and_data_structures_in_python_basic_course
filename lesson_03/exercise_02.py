@@ -21,4 +21,4 @@ for index, element in enumerate(array):
 print(even_indexes)
 
 for index in even_indexes:
-    print(f'Индекс {index}: элемент {array[index]}.')
+    print(f'Индекс {index}: элемент {array[index]}')

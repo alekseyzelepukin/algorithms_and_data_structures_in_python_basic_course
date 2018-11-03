@@ -4,7 +4,7 @@ from random import randint
 
 SIZE = 10
 
-array = [randint(-99, 99) for _ in range(SIZE)]
+array = [randint(-9, 9) for _ in range(SIZE)]
 
 print(array)
 
@@ -18,6 +18,6 @@ for index, element in enumerate(array):
             max_neg_index = index
 
 if max_neg_index == -1:
-    print('В массиве нет отрицательных элемпнтов.')
+    print('В массиве нет отрицательных элемпнтов')
 else:
     print(f'Элемент: {array[max_neg_index]}, позиция: {max_neg_index}')

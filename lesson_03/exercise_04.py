@@ -4,14 +4,18 @@ from random import randint
 
 SIZE = 10
 
-array = [randint(0, 99) for _ in range(SIZE)]
-# array = [8, 3, 15, 6, 4, 2]
+array = [randint(0, 9) for _ in range(SIZE)]
 
 print(array)
 
-# TODO:
-n = array[0]
-freq = 1
+# n = array[0]
+# n_freq = 1
 
-for element in array:
-    pass
+scores = [0 for _ in range(len(array))]
+
+for index, i in enumerate(array):
+    for j in array:
+        if i == j:
+            scores[index] += 1
+
+print(scores)
