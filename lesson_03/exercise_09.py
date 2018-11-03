@@ -31,6 +31,4 @@ for element in array[1:]:
     if element > max_element:
         max_element = element
 
-print(array)
-
 print(f'Максимальный элемент: {max_element}')
