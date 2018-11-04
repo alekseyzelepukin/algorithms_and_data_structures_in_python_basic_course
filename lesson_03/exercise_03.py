@@ -2,7 +2,7 @@
 
 from random import randint
 
-SIZE = 10
+SIZE = 6
 
 array = [randint(0, 99) for _ in range(SIZE)]
 

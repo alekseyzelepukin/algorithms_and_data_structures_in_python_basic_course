@@ -10,6 +10,8 @@ SIZE = 10
 
 array = [randint(0, 9) for _ in range(SIZE)]
 
+# array = [8, 3, 15, 6, 4, 2]  #  массив из условия задачи
+
 print(array)
 
 even_indexes = []
