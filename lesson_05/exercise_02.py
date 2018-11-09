@@ -33,23 +33,23 @@ def hex_sum(a, b):
         dec2hex[index] = value
         hex2dec[value] = index
 
-    hex_sum = deque()
-    dec_sum = 0
+    hex = deque()
+    dec = 0
     digit = 0
     boost = 0
 
     for i, j in zip(deq_a, deq_b):
-        dec_sum = hex2dec[i] + hex2dec[j]
-        digit = dec_sum % 16
-        if dec_sum // 16 > 0:
+        dec = hex2dec[i] + hex2dec[j]
+        digit = dec % 16
+        if dec // 16 > 0:
             boost = 1
-            hex_sum.appendleft(dec2hex[digit])
+            hex.appendleft(dec2hex[digit])
         else:
             digit += boost
             boost = 0
-            hex_sum.appendleft(dec2hex[digit])
+            hex.appendleft(dec2hex[digit])
 
-    return list(hex_sum)
+    return list(hex)
 
 
 print(hex_sum('A2', 'C4F'))
