@@ -8,7 +8,7 @@
 from collections import deque, defaultdict
 
 
-def hex_sum(a, b):
+def hex_add(a, b):
     digit_number_a = len(a)
     digit_number_b = len(b)
     digit_number_diff = abs(digit_number_a - digit_number_b)
@@ -33,23 +33,24 @@ def hex_sum(a, b):
         dec2hex[index] = value
         hex2dec[value] = index
 
-    hex = deque()
-    dec = 0
-    digit = 0
+    result = deque()
     boost = 0
 
     for i, j in zip(deq_a, deq_b):
         dec = hex2dec[i] + hex2dec[j]
         digit = dec % 16
         if dec // 16 > 0:
+            digit += boost
+            result.appendleft(dec2hex[digit])
             boost = 1
-            hex.appendleft(dec2hex[digit])
         else:
             digit += boost
+            result.appendleft(dec2hex[digit])
             boost = 0
-            hex.appendleft(dec2hex[digit])
+    if boost > 0:
+        result.appendleft(dec2hex[boost])
 
-    return list(hex)
+    return list(result)
 
 
-print(hex_sum('A2', 'C4F'))
+print(hex_add('A2', 'C4F'))
