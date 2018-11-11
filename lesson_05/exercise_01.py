@@ -6,11 +6,12 @@
 # Примечание: 4 квартала - это 4 разных прибыли ;-)
 
 from collections import defaultdict
-from random import randint
+# from random import randint
 
-# n = int(input('Введите количество предприятий: '))
 
-n = randint(0, 9)
+n = int(input('Введите количество предприятий: '))
+
+# n = randint(0, 9)
 
 while n < 1:
     print('Число предприятий должно быть положительным. Попробуйте еще раз!')
@@ -25,12 +26,12 @@ company = None
 income = 0
 
 for i in range(n):
-    # company = input(f'Введите название предприятия #{i + 1}: ')
-    company = 'Company_' + str(i)
+    company = input(f'Введите название предприятия #{i + 1}: ')
+    # company = 'Company_' + str(i)
     annual_income = 0
     for j in range(4):
-        # income = float(input(f'Введите выручку за квартал #{j + 1} предприятия {company}: '))
-        income = randint(-999, 999)
+        income = float(input(f'Введите выручку за квартал #{j + 1} предприятия {company}: '))
+        # income = randint(-999, 999)
         annual_income += income
         total_income += income
     annual_statement[company] = annual_income

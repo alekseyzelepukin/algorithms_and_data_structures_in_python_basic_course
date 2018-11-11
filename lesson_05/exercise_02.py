@@ -56,7 +56,6 @@ def hex_add(a, b):
 def hex_mul(a, b):
     digit_number_a = len(a)
     digit_number_b = len(b)
-    digit_number_diff = abs(digit_number_a - digit_number_b)
 
     deq_a = deque(a)
     deq_b = deque(b)
