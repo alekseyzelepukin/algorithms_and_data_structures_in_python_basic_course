@@ -6,7 +6,6 @@ from random import randint
 
 
 def bubble_sort(array, ascending=True):
-
     if len(array) <= 1:
         return array
 
@@ -32,9 +31,9 @@ def bubble_sort(array, ascending=True):
     return array
 
 
-n = randint(2, 12)
-
+n = 10
 array = [randint(-100, 99) for _ in range(n)]
+sorted_array = bubble_sort(array.copy(), ascending=False)
 
-print(f'Исходный массив:        {array}')
-print(f'Отсортированный массив: {bubble_sort(array, ascending=False)}')
+print(f'Исходный массив:      {array}')
+print(f'Сортированный массив: {sorted_array}')

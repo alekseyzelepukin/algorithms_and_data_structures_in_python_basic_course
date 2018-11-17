@@ -6,11 +6,9 @@
 # который не рассматривался на уроках.
 
 from random import randint
-import numpy as np
 
 
 def gnome_sort(array):
-
     if len(array) <= 1:
         return array
 
@@ -27,19 +25,14 @@ def gnome_sort(array):
 
 
 def median_(array):
-
-    spam = array.copy()
-
-    sorted_array = gnome_sort(spam)
-
     mid = len(array) // 2
-
+    sorted_array = gnome_sort(array.copy())
     return sorted_array[mid]
 
 
-n = 2 * randint(0, 6) + 1
-
+m = 5
+n = 2 * m + 1
 array = [randint(-100, 99) for _ in range(n)]
 
+print(gnome_sort(array.copy()))
 print(f'Медиана массива: {median_(array)}')
-
