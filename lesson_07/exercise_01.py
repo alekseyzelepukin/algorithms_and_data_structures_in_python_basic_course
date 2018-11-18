@@ -6,7 +6,7 @@ from random import randint
 
 
 def bubble_sort(array, ascending=True):
-    if len(array) <= 1:
+    if len(array) < 2:
         return array
 
     n = 1
